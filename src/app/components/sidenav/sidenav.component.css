@@ -1,0 +1,16 @@
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a.active{
+  color: #879ed5;
+}
+
+a:hover{
+  color: indigo;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+

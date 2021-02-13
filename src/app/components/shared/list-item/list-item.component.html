@@ -1,0 +1,20 @@
+<div class="row" style="padding: 10px 0">
+  <div class="col-xl-8">
+
+    <div>
+      <span style="font-weight: 500;"> Name:</span> {{ author.name }}
+    </div>
+
+    <div style="padding-top: 5px;">
+      <span style="font-weight: 500;"> Bio:</span>  {{ author.bio }}
+    </div>
+
+  </div>
+
+  <div class="col-xl-4 text-xl-right">
+    <button class="btn btn-primary"
+            *ngIf="!author.isFavourite" (click)="addToFavourites()">Add Favt</button>
+    <button class="btn btn-danger"
+             *ngIf="author.isFavourite" (click)="removeFromFavourites()">Remove Favt</button>
+  </div>
+</div>

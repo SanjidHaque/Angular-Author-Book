@@ -1,0 +1,26 @@
+<div>
+
+  <div class="row" *ngIf="!authors.length; else authorsExits">
+    <div class="col-xl-12">
+
+      Loading...
+
+    </div>
+  </div>
+
+  <ng-template #authorsExits>
+
+    <div class="row">
+      <div class="col-xl-6" *ngFor="let author of authors">
+        <app-list-item [author]="author"
+                       (addFavouriteEvent)="addToFavourites($event)"
+                       (removeFavouriteEvent)="removeFromFavourites($event)">
+        </app-list-item>
+      </div>
+    </div>
+
+  </ng-template>
+
+
+</div>
+
